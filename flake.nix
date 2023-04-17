@@ -21,6 +21,7 @@
         openssl,
         pkg-config,
         rustPlatform,
+        cacert,
       }:
         rustPlatform.buildRustPackage {
           name = "wthrr-the-weathercrab";
@@ -29,6 +30,7 @@
           nativeBuildInputs = [
             pkg-config
             rustPlatform.bindgenHook
+            cacert
           ];
           buildInputs = [openssl];
           meta = with lib; {
